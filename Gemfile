@@ -1,5 +1,5 @@
 source 'http://rubygems.org'
-ruby '2.1.0'
+
 gem 'rails', '3.1.0'
 gem 'nokogiri', '~> 1.6.1'
 gem 'pg', '~> 0.18.4'
