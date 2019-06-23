@@ -1,0 +1,42 @@
+
+<div>
+  <div class="askuery-form">
+    <%= form_tag(:controller => 'system', :action => 'add_new_post', :user_id => session[:id]) do %>
+      <%= text_area_tag(:question, "", :class => "text-input") %>
+      <br />
+      <% @keywords.each do |keyword| %>
+        <input type="button" name="My button" value="<%= keyword.keyword %>" onClick="clic(this);" >
+      <% end%>
+      <br />
+      <br />
+      <div class="button-panel-container">
+        <div class="button-panel">
+          <ul>
+            <li><%= link_to "Home", :controller => 'system', :action => 'index', :class => "go-back" %></li>
+          </ul>
+        </div>
+        <div class="form-button-panel">
+          <ul>
+            <li><%= submit_tag("Click here to Post", :class => "form-button") %></li>
+          </ul>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  <div>
+    <br />
+    <br />
+    <br />
+    <hr />
+  </div>
+
+</div>
+
+<script type="text/javascript">
+function clic(element)
+{
+  var text = document.getElementById('question');
+  text.value += ' ' + element.value;
+}
+
+</script>

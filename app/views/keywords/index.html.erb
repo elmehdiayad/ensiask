@@ -1,0 +1,36 @@
+<div>
+  <br />
+
+</div>
+<div class="title">
+  Keywords
+</div>
+<br />
+<hr />
+<div class="user-list-container">
+  <table cellpadding="3" cellspacing="1">
+  <% @keywords.each do |keyword| %>
+    <tr>
+    <th>
+    <%= keyword.keyword %>
+    </th>
+    <th>
+    </th>
+    <th>
+    <% if session[:isadmin] == 1 %>
+      <%= button_to "Delete", {:controller => 'keywords', :action => :destroy, :class => 'form-button', :id => keyword.id}, :class => 'form-button'  %>
+    <% end %>
+    </th>
+    </tr>
+  <% end %>
+  </table>
+</div>
+
+<div>
+  <br />
+  <hr>
+  <% if session[:isadmin] == 1 %>
+  <%= render 'form'%>
+  <% end%>
+ 
+</div>

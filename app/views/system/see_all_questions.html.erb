@@ -1,0 +1,17 @@
+<br />
+<div class="title">
+  Critical Questions
+</div>
+<br />
+<div class="post-container">
+<% if @posts.size > 0 %>
+<% @posts.each do |post| %>
+  <% if post.numofvotes >= 2 %>
+    <%= render(post)%>
+  <% end %>
+<% end %>
+<% else %>
+Be the first one to ask a Question
+<% end %>
+</div>
+
