@@ -1,7 +1,7 @@
 source 'http://rubygems.org'
 
 gem 'rails', '3.1.0'
-gem 'nokogiri', '~> 1.6.1'
+gem 'nokogiri', '~> 1.13.4'
 gem 'pg', '~> 0.18.4'
 
 # gem 'therubyracer-heroku'
